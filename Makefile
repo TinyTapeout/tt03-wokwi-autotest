@@ -10,7 +10,7 @@ export COCOTB_REDUCED_LOG_FMT=1
 
 WOKWI_PROJECT_ID ?= $(shell python ./tt/tt_tool.py --print-wokwi-id)
 
-ifneq ($(GATES),yes)
+ifneq ($(GATELEVEL),yes)
 # normal simulation
 VERILOG_SOURCES += $(PWD)/test/dffsr_tb.v $(PWD)/src/user_module_${WOKWI_PROJECT_ID}.v $(PWD)/src/cells.v
 else
@@ -24,7 +24,7 @@ VERILOG_SOURCES += $(PDK_ROOT)/sky130B/libs.ref/sky130_fd_sc_hd/verilog/primitiv
 VERILOG_SOURCES += $(PDK_ROOT)/sky130B/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v
 
 # the github action copies the gatelevel verilog from /runs/wokwi/results/final/verilog/gl/ 
-VERILOG_SOURCES += $(PWD)/test/dffsr_tb.v $(PWD)/src/user_module_${WOKWI_PROJECT_ID}.gl.v
+VERILOG_SOURCES += $(PWD)/test/dffsr_tb.v $(PWD)/src/user_module.gl.v
 endif
 
 # TOPLEVEL is the name of the toplevel module in your Verilog or VHDL file
