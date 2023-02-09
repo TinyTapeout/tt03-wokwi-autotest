@@ -223,3 +223,28 @@ jobs:
         # 2D Preview
         ![png]($PAGE_URL/gds_render.png)
         EOF
+
+  test-rtl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: checkout tt tools repo
+        uses: actions/checkout@v3
+        with:
+          repository: tinytapeout/tt-support-tools
+          path: tt
+      - name: setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: install dependencies
+        run: pip install -r requirements.txt
+      - name: install tt_tool dependencies
+        run: pip install -r tt/requirements.txt
+      - name: install iverilog
+        run: sudo apt-get install -y iverilog
+      - name: fetch Verilog and build config
+        run: ./tt/tt_tool.py --create-user-config
+      - name: run tests
+        run: make
