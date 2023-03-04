@@ -1,9 +1,13 @@
 .DS_Store
 .idea
 .vscode
+__pycache__
 *.vcd
 runs
 src/sim_build
 src/__pycache__/
 src/results.xml
 src/user_config.tcl
+results.xml
+dffsr_tb.out
+sim_build

@@ -1,0 +1,27 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Tue Nov 15 08:47:52 2022
+[*]
+[dumpfile] "/mnt/c/p/tt02-dsr-cell-test/dffsr_tb.vcd"
+[dumpfile_mtime] "Tue Nov 15 08:47:11 2022"
+[dumpfile_size] 2459
+[savefile] "/mnt/c/p/tt02-dsr-cell-test/test/dffsr_tb.gtkw"
+[timestart] 0
+[size] 1908 999
+[pos] -1 -1
+*-14.665359 206900 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 214
+[signals_width] 118
+[sst_expanded] 1
+[sst_vpaned_height] 293
+@28
+test_dffsr.clk
+test_dffsr.set
+test_dffsr.reset
+test_dffsr.data
+@29
+test_dffsr.q
+@28
+test_dffsr.notq
+[pattern_trace] 1
+[pattern_trace] 0
